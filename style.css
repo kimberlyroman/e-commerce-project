@@ -232,9 +232,6 @@ button:active{
 .book{
     width: 25%;
     padding: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
 }
 
 .book__img--wrapper{
@@ -248,9 +245,31 @@ button:active{
    max-height: 300px;
     margin-bottom: 16px;
     transition: all 300ms ease;
-    cursor: no-drop;
+    cursor: not-allowed;
 }
 
 .book:hover .book__img{
     transform: scale(1.03);
+}
+
+.book__title{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover{
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings{
+    margin-bottom: 8px;
+    color: #fabf2a;
+    text-shadow: rgba(0, 0, 0, 0.359) 0.1em 0.1em 0.1em;
+}
+
+.book__price--normal{
+    text-decoration: line-through;
+    color: #bfbfbf;
+;    margin-right: 8px;
 }
