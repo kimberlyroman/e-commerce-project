@@ -219,9 +219,9 @@ button:active{
 }
 
 /* Featured */
+
 #features {
     background: #4362ee27;
-    height: 1000px;
     padding-top: 8vw;
 }
 
@@ -243,6 +243,7 @@ button:active{
 
 .book__img{
    max-height: 300px;
+   max-width: 200px;
     margin-bottom: 16px;
     transition: all 300ms ease;
     cursor: not-allowed;
@@ -272,4 +273,16 @@ button:active{
     text-decoration: line-through;
     color: #bfbfbf;
 ;    margin-right: 8px;
+}
+
+/* Latest Books */
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book{
+    width: 25%;
+    padding: 16px;
 }
