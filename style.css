@@ -300,3 +300,7 @@ button:active{
     flex-direction: column;
     text-align: center;
 }
+
+#explore .bttn {
+    cursor: not-allowed;
+}
