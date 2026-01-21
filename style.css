@@ -32,6 +32,7 @@ p {
     text-align: center;
     border: none;
     color: #4361ee;
+    display: none;
 }
 
 .menu__backdrop{
@@ -42,12 +43,24 @@ p {
     bottom: 0;
     background-color:#242424;
     z-index: 10;
-    display:flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease, visibility 300ms ease;
 }
 
-.btn__menu__close{
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu__open {
+    max-width: 100vh;
+    overflow-y: hidden;
+}
+
+.btn__menu--close{
     position: absolute;
     top: 10px;
     right: 20px;
@@ -67,9 +80,13 @@ p {
 
 .menu__link{
     color: white;
-    font-size: 32px;
+    font-size: 40px;
     text-decoration: none;
     margin: 16px 0;
+}
+
+.menu__list {
+    padding: 32px 0;
 }
 
 /* Nav */
@@ -393,4 +410,12 @@ footer {
 }
 
 /*Responsive*/
-@media screen and (max-width: 768px)
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+}
