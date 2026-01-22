@@ -55,7 +55,7 @@ p {
     opacity: 1;
 }
 
-.menu__open {
+.menu--open {
     max-width: 100vh;
     overflow-y: hidden;
 }
@@ -282,6 +282,7 @@ button:active{
 .highlight__subtitle{
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 /* Featured */
@@ -410,6 +411,9 @@ footer {
 }
 
 /*Responsive*/
+
+/*Small phones, large smart phones*/
+
 @media (max-width: 550px) {
     .nav__links {
         display: none;
@@ -418,4 +422,34 @@ footer {
     .btn__menu {
         display: block;
     }
+
+    .highlight {
+        width: 100%;
+    }
+    
+    .highlight__wrapper {
+        flex-wrap: wrap;
+    }
+    .highlight:not(:last-child){
+        margin-bottom: 24px;
+    }
 }
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+    .header__description{
+        padding: 0 24px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    button {
+        font-size: 18;
+    }
+    .book {
+        width: 50%
+    }
+  
